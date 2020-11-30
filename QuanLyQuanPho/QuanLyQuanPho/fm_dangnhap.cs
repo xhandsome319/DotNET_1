@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyQuanPho.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,10 +26,23 @@ namespace QuanLyQuanPho
 
         private void bt_dangnhap_Click(object sender, EventArgs e)
         {
-            fm_chinh Chinh = new fm_chinh();
-            this.Hide();
-            Chinh.ShowDialog();
-            this.Show();
+            string userName = tb_taikhoan.Text;
+            string passWord = tb_matkhau.Text;
+            if (Login(userName,passWord)) 
+            {
+                fm_chinh f = new fm_chinh();
+                this.Hide();
+                f.ShowDialog();
+                this.Show(); 
+            }
+            else
+            {
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+            }
+        }
+        bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
         }
 
         private void fm_dangnhap_Load(object sender, EventArgs e)

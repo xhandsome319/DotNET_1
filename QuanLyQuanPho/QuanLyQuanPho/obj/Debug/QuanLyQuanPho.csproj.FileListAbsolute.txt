@@ -9,3 +9,15 @@ C:\Users\TrungHau\Desktop\LapTrinhDotNET\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\Q
 C:\Users\TrungHau\Desktop\LapTrinhDotNET\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.csproj.CoreCompileInputs.cache
 C:\Users\TrungHau\Desktop\LapTrinhDotNET\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.exe
 C:\Users\TrungHau\Desktop\LapTrinhDotNET\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.pdb
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\bin\Debug\QuanLyQuanPho.exe.config
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\bin\Debug\QuanLyQuanPho.exe
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\bin\Debug\QuanLyQuanPho.pdb
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.csprojAssemblyReference.cache
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.fm_chinh.resources
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.fm_dangnhap.resources
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.Properties.Resources.resources
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.csproj.GenerateResource.cache
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.csproj.CoreCompileInputs.cache
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.exe
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.pdb
+C:\Users\TrungHau\Desktop\DotNET_1\QuanLyQuanPho\QuanLyQuanPho\obj\Debug\QuanLyQuanPho.fm_nhanvien.resources

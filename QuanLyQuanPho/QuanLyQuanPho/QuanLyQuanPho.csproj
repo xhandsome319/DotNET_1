@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="fm_dangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +60,12 @@
     <Compile Include="fm_chinh.Designer.cs">
       <DependentUpon>fm_chinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="fm_nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_nhanvien.Designer.cs">
+      <DependentUpon>fm_nhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fm_chinh.resx">
@@ -65,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fm_dangnhap.resx">
       <DependentUpon>fm_dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm_nhanvien.resx">
+      <DependentUpon>fm_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PhoGa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
