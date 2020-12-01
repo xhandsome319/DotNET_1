@@ -1,4 +1,5 @@
 ﻿using QuanLyQuanPho.DAO;
+using QuanLyQuanPho.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,30 @@ namespace QuanLyQuanPho
         public fm_chinh()
         {
             InitializeComponent();
+            LoadTable();
+        }
+
+        void LoadTable()
+        {
+            List<Table> tableList = TableDAO.Instance.LoadTableList();
+
+            foreach (Table item in tableList)
+            {
+                Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
+                btn.Text = item.Name + Environment.NewLine + item.Status;
+
+                switch (item.Status)
+                {
+                    case "Trống":
+                        btn.BackColor = Color.White;
+                        break;
+                    default:
+                        btn.BackColor = Color.Brown;
+                        break;
+                }
+
+                flp_banan.Controls.Add(btn);
+            }
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
