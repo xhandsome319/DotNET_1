@@ -31,25 +31,25 @@ namespace QuanLyQuanPho
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tb_taikhoan = new System.Windows.Forms.TextBox();
+            this.bt_dangnhap = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tb_matkhau = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.bt_dangnhap = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tb_taikhoan = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -78,44 +78,17 @@ namespace QuanLyQuanPho
             this.panel1.Size = new System.Drawing.Size(466, 516);
             this.panel1.TabIndex = 1;
             // 
-            // label2
+            // bt_dangnhap
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(141, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 35);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ĐĂNG NHẬP";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.tb_taikhoan);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(0, 132);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(463, 65);
-            this.panel2.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(17, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 34);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tài khoản:";
-            // 
-            // tb_taikhoan
-            // 
-            this.tb_taikhoan.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_taikhoan.Location = new System.Drawing.Point(175, 15);
-            this.tb_taikhoan.Name = "tb_taikhoan";
-            this.tb_taikhoan.Size = new System.Drawing.Size(270, 39);
-            this.tb_taikhoan.TabIndex = 1;
+            this.bt_dangnhap.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_dangnhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.bt_dangnhap.Location = new System.Drawing.Point(206, 329);
+            this.bt_dangnhap.Name = "bt_dangnhap";
+            this.bt_dangnhap.Size = new System.Drawing.Size(239, 86);
+            this.bt_dangnhap.TabIndex = 3;
+            this.bt_dangnhap.Text = "Đăng Nhập";
+            this.bt_dangnhap.UseVisualStyleBackColor = true;
+            this.bt_dangnhap.Click += new System.EventHandler(this.bt_dangnhap_Click);
             // 
             // panel3
             // 
@@ -146,17 +119,44 @@ namespace QuanLyQuanPho
             this.label4.TabIndex = 0;
             this.label4.Text = "Mật khẩu:";
             // 
-            // bt_dangnhap
+            // panel2
             // 
-            this.bt_dangnhap.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_dangnhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bt_dangnhap.Location = new System.Drawing.Point(206, 329);
-            this.bt_dangnhap.Name = "bt_dangnhap";
-            this.bt_dangnhap.Size = new System.Drawing.Size(239, 86);
-            this.bt_dangnhap.TabIndex = 3;
-            this.bt_dangnhap.Text = "Đăng Nhập";
-            this.bt_dangnhap.UseVisualStyleBackColor = true;
-            this.bt_dangnhap.Click += new System.EventHandler(this.bt_dangnhap_Click);
+            this.panel2.Controls.Add(this.tb_taikhoan);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(0, 132);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(463, 65);
+            this.panel2.TabIndex = 1;
+            // 
+            // tb_taikhoan
+            // 
+            this.tb_taikhoan.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_taikhoan.Location = new System.Drawing.Point(175, 15);
+            this.tb_taikhoan.Name = "tb_taikhoan";
+            this.tb_taikhoan.Size = new System.Drawing.Size(270, 39);
+            this.tb_taikhoan.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(17, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 34);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tài khoản:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(141, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(196, 35);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ĐĂNG NHẬP";
             // 
             // panel4
             // 
@@ -168,14 +168,15 @@ namespace QuanLyQuanPho
             this.panel4.Size = new System.Drawing.Size(623, 272);
             this.panel4.TabIndex = 2;
             // 
-            // pictureBox1
+            // label6
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(277, 230);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(312, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(287, 44);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Thách thức một ai\r\nthử một lần mà không quay trở lại";
             // 
             // label5
             // 
@@ -188,15 +189,14 @@ namespace QuanLyQuanPho
             this.label5.TabIndex = 1;
             this.label5.Text = "Phở Tái";
             // 
-            // label6
+            // pictureBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(312, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(287, 44);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Thách thức một ai\r\nthử một lần mà không quay trở lại";
+            this.pictureBox1.Location = new System.Drawing.Point(13, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(277, 230);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel5
             // 
@@ -240,6 +240,7 @@ namespace QuanLyQuanPho
             // 
             // fm_dangnhap
             // 
+            this.AcceptButton = this.bt_dangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 697);
@@ -254,10 +255,10 @@ namespace QuanLyQuanPho
             this.Load += new System.EventHandler(this.fm_dangnhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
