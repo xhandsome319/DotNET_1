@@ -35,7 +35,11 @@ namespace QuanLyQuanPho
             this.chủQuánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lsv_hoadon = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.tb_thanhtien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -108,7 +112,7 @@ namespace QuanLyQuanPho
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.lsv_hoadon);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(579, 46);
@@ -116,14 +120,41 @@ namespace QuanLyQuanPho
             this.panel1.Size = new System.Drawing.Size(567, 703);
             this.panel1.TabIndex = 2;
             // 
-            // listView1
+            // lsv_hoadon
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 188);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(564, 333);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lsv_hoadon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lsv_hoadon.GridLines = true;
+            this.lsv_hoadon.HideSelection = false;
+            this.lsv_hoadon.Location = new System.Drawing.Point(0, 188);
+            this.lsv_hoadon.Name = "lsv_hoadon";
+            this.lsv_hoadon.Size = new System.Drawing.Size(564, 333);
+            this.lsv_hoadon.TabIndex = 2;
+            this.lsv_hoadon.UseCompatibleStateImageBehavior = false;
+            this.lsv_hoadon.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 192;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 76;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            this.columnHeader3.Width = 73;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 81;
             // 
             // panel3
             // 
@@ -159,24 +190,14 @@ namespace QuanLyQuanPho
             // 
             this.neud_giamgia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neud_giamgia.Location = new System.Drawing.Point(16, 97);
-            this.neud_giamgia.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             this.neud_giamgia.Minimum = new decimal(new int[] {
-            50,
+            100,
             0,
             0,
             -2147483648});
             this.neud_giamgia.Name = "neud_giamgia";
             this.neud_giamgia.Size = new System.Drawing.Size(142, 30);
             this.neud_giamgia.TabIndex = 4;
-            this.neud_giamgia.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // bt_thanhtoan
             // 
@@ -369,6 +390,10 @@ namespace QuanLyQuanPho
         private System.Windows.Forms.Button bt_chuyenban;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cb_chuyenban;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lsv_hoadon;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

@@ -134,3 +134,140 @@ AS SELECT * FROM DBO.TableFood
 GO
 
 EXEC DBO.USP_GetTableList
+GO
+
+--Them loai thuc an
+INSERT dbo.FoodCategory
+        ( name )
+VALUES  ( N'Thức ăn nước' ) -- name - nvarchar(100)
+          
+INSERT dbo.FoodCategory
+        ( name )
+VALUES  ( N'Thức ăn khô' )
+          
+INSERT dbo.FoodCategory
+        ( name )
+VALUES  ( N'Nước uống' )
+
+INSERT dbo.FoodCategory
+        ( name )
+VALUES  ( N'Thức ăn thêm' )
+
+--Them mon an
+--1.Thuc an nuoc
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở đặc biệt', -- name - nvarchar(100)
+          1, -- idCategory - int
+          39000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở tái', 1, 35000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở gà ', 1, 30000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở bò chín', 1, 35000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở bò viên ', 1, 30000)
+
+--2.Thuc an kho
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở cuốn ', 2, 30000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở chiên phồng ', 2, 30000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Phở chiên trứng ', 2, 30000)
+
+--3.Nuoc uong
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'7Up', 3, 12000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Sting', 3, 12000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Trà đá', 3, 2000)
+
+--4.Thuc an them
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Bánh phở', 4, 8000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Bò', 4, 8000)
+INSERT dbo.Food
+        ( name, idCategory, price )
+VALUES  ( N'Bò viên', 4, 8000)
+
+--Them hoa don
+INSERT	dbo.Bill
+        ( DateCheckIn ,
+          DateCheckOut ,
+          idTable ,
+          status
+        )
+VALUES  ( GETDATE() , -- DateCheckIn - date
+          NULL , -- DateCheckOut - date
+          1 , -- idTable - int
+          0  -- status - int
+        )
+        
+INSERT	dbo.Bill
+        ( DateCheckIn ,
+          DateCheckOut ,
+          idTable ,
+          status
+        )
+VALUES  ( GETDATE() , -- DateCheckIn - date
+          NULL , -- DateCheckOut - date
+          2, -- idTable - int
+          0  -- status - int
+        )
+INSERT	dbo.Bill
+        ( DateCheckIn ,
+          DateCheckOut ,
+          idTable ,
+          status
+        )
+VALUES  ( GETDATE() , -- DateCheckIn - date
+          GETDATE() , -- DateCheckOut - date
+          3 , -- idTable - int
+          1  -- status - int
+        )
+
+--Them chi tiet hoa don
+INSERT	dbo.BillInfo
+        ( idBill, idFood, count )
+VALUES  ( 1, -- idBill - int
+          1, -- idFood - int
+          2  -- count - int
+          )
+
+INSERT	dbo.BillInfo
+        ( idBill, idFood, count )
+VALUES  ( 1, -- idBill - int
+          3, -- idFood - int
+          4  -- count - int
+          )
+
+INSERT	dbo.BillInfo
+        ( idBill, idFood, count )
+VALUES  ( 2, -- idBill - int
+          5, -- idFood - int
+          1  -- count - int
+          )
+
+INSERT	dbo.BillInfo
+        ( idBill, idFood, count )
+VALUES  ( 3, -- idBill - int
+          1, -- idFood - int
+          2  -- count - int
+          )
+GO
