@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,16 +52,19 @@ namespace QuanLyQuanPho
         {
             lsv_hoadon.Items.Clear();
             List<QuanLyQuanPho.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
-
+            float totalPrice = 0;
             foreach (QuanLyQuanPho.DTO.Menu item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
                 lsvItem.SubItems.Add(item.Count.ToString());
                 lsvItem.SubItems.Add(item.Price.ToString());
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
-
+                totalPrice += item.TotalPrice;
                 lsv_hoadon.Items.Add(lsvItem);
             }
+            CultureInfo culture = new CultureInfo("vi-VN");
+
+            tb_thanhtien.Text = totalPrice.ToString("c",culture);
         }
 
         void btn_Click(object sender, EventArgs e)

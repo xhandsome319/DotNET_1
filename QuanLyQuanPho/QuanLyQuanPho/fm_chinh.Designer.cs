@@ -127,6 +127,7 @@ namespace QuanLyQuanPho
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.lsv_hoadon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsv_hoadon.GridLines = true;
             this.lsv_hoadon.HideSelection = false;
             this.lsv_hoadon.Location = new System.Drawing.Point(0, 188);
@@ -170,11 +171,14 @@ namespace QuanLyQuanPho
             // 
             // tb_thanhtien
             // 
-            this.tb_thanhtien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_thanhtien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_thanhtien.Location = new System.Drawing.Point(184, 96);
             this.tb_thanhtien.Name = "tb_thanhtien";
+            this.tb_thanhtien.ReadOnly = true;
             this.tb_thanhtien.Size = new System.Drawing.Size(164, 30);
             this.tb_thanhtien.TabIndex = 6;
+            this.tb_thanhtien.Text = "0";
+            this.tb_thanhtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -294,6 +298,7 @@ namespace QuanLyQuanPho
             // 
             // flp_banan
             // 
+            this.flp_banan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flp_banan.Location = new System.Drawing.Point(6, 46);
             this.flp_banan.Name = "flp_banan";
             this.flp_banan.Size = new System.Drawing.Size(567, 515);
