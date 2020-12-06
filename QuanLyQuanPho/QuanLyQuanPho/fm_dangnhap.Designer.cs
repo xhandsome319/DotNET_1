@@ -106,6 +106,7 @@ namespace QuanLyQuanPho
             this.tb_matkhau.Name = "tb_matkhau";
             this.tb_matkhau.Size = new System.Drawing.Size(270, 39);
             this.tb_matkhau.TabIndex = 1;
+            this.tb_matkhau.Text = "trunghau";
             this.tb_matkhau.UseSystemPasswordChar = true;
             // 
             // label4
@@ -135,6 +136,7 @@ namespace QuanLyQuanPho
             this.tb_taikhoan.Name = "tb_taikhoan";
             this.tb_taikhoan.Size = new System.Drawing.Size(270, 39);
             this.tb_taikhoan.TabIndex = 1;
+            this.tb_taikhoan.Text = "nv01";
             // 
             // label3
             // 

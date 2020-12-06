@@ -35,7 +35,7 @@ namespace QuanLyQuanPho
             this.chủQuánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lsv_hoadon = new System.Windows.Forms.ListView();
+            this.lsvBill = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,11 +47,11 @@ namespace QuanLyQuanPho
             this.bt_thanhtoan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.neud_soluong = new System.Windows.Forms.NumericUpDown();
-            this.bt_themmon = new System.Windows.Forms.Button();
+            this.nmFoodCount = new System.Windows.Forms.NumericUpDown();
+            this.btnAddFood = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_tenthucan = new System.Windows.Forms.ComboBox();
-            this.cb_loaithucan = new System.Windows.Forms.ComboBox();
+            this.cbFood = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.flp_banan = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bt_chuyenban = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@ namespace QuanLyQuanPho
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.neud_giamgia)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.neud_soluong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@ namespace QuanLyQuanPho
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lsv_hoadon);
+            this.panel1.Controls.Add(this.lsvBill);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(579, 46);
@@ -120,22 +120,22 @@ namespace QuanLyQuanPho
             this.panel1.Size = new System.Drawing.Size(567, 703);
             this.panel1.TabIndex = 2;
             // 
-            // lsv_hoadon
+            // lsvBill
             // 
-            this.lsv_hoadon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lsv_hoadon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsv_hoadon.GridLines = true;
-            this.lsv_hoadon.HideSelection = false;
-            this.lsv_hoadon.Location = new System.Drawing.Point(0, 188);
-            this.lsv_hoadon.Name = "lsv_hoadon";
-            this.lsv_hoadon.Size = new System.Drawing.Size(564, 333);
-            this.lsv_hoadon.TabIndex = 2;
-            this.lsv_hoadon.UseCompatibleStateImageBehavior = false;
-            this.lsv_hoadon.View = System.Windows.Forms.View.Details;
+            this.lsvBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsvBill.GridLines = true;
+            this.lsvBill.HideSelection = false;
+            this.lsvBill.Location = new System.Drawing.Point(0, 188);
+            this.lsvBill.Name = "lsvBill";
+            this.lsvBill.Size = new System.Drawing.Size(564, 333);
+            this.lsvBill.TabIndex = 2;
+            this.lsvBill.UseCompatibleStateImageBehavior = false;
+            this.lsvBill.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -225,48 +225,49 @@ namespace QuanLyQuanPho
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.neud_soluong);
-            this.panel2.Controls.Add(this.bt_themmon);
+            this.panel2.Controls.Add(this.nmFoodCount);
+            this.panel2.Controls.Add(this.btnAddFood);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.cb_tenthucan);
-            this.panel2.Controls.Add(this.cb_loaithucan);
+            this.panel2.Controls.Add(this.cbFood);
+            this.panel2.Controls.Add(this.cbCategory);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(567, 182);
             this.panel2.TabIndex = 0;
             // 
-            // neud_soluong
+            // nmFoodCount
             // 
-            this.neud_soluong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.neud_soluong.Location = new System.Drawing.Point(111, 126);
-            this.neud_soluong.Maximum = new decimal(new int[] {
+            this.nmFoodCount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmFoodCount.Location = new System.Drawing.Point(111, 126);
+            this.nmFoodCount.Maximum = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.neud_soluong.Minimum = new decimal(new int[] {
+            this.nmFoodCount.Minimum = new decimal(new int[] {
             50,
             0,
             0,
             -2147483648});
-            this.neud_soluong.Name = "neud_soluong";
-            this.neud_soluong.Size = new System.Drawing.Size(142, 30);
-            this.neud_soluong.TabIndex = 4;
-            this.neud_soluong.Value = new decimal(new int[] {
+            this.nmFoodCount.Name = "nmFoodCount";
+            this.nmFoodCount.Size = new System.Drawing.Size(142, 30);
+            this.nmFoodCount.TabIndex = 4;
+            this.nmFoodCount.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // bt_themmon
+            // btnAddFood
             // 
-            this.bt_themmon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_themmon.Location = new System.Drawing.Point(371, 92);
-            this.bt_themmon.Name = "bt_themmon";
-            this.bt_themmon.Size = new System.Drawing.Size(164, 75);
-            this.bt_themmon.TabIndex = 3;
-            this.bt_themmon.Text = "Thêm Món";
-            this.bt_themmon.UseVisualStyleBackColor = true;
+            this.btnAddFood.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFood.Location = new System.Drawing.Point(371, 92);
+            this.btnAddFood.Name = "btnAddFood";
+            this.btnAddFood.Size = new System.Drawing.Size(164, 75);
+            this.btnAddFood.TabIndex = 3;
+            this.btnAddFood.Text = "Thêm Món";
+            this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // label1
             // 
@@ -278,23 +279,24 @@ namespace QuanLyQuanPho
             this.label1.TabIndex = 2;
             this.label1.Text = "Số Lượng:";
             // 
-            // cb_tenthucan
+            // cbFood
             // 
-            this.cb_tenthucan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_tenthucan.FormattingEnabled = true;
-            this.cb_tenthucan.Location = new System.Drawing.Point(16, 49);
-            this.cb_tenthucan.Name = "cb_tenthucan";
-            this.cb_tenthucan.Size = new System.Drawing.Size(519, 30);
-            this.cb_tenthucan.TabIndex = 1;
+            this.cbFood.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFood.FormattingEnabled = true;
+            this.cbFood.Location = new System.Drawing.Point(16, 49);
+            this.cbFood.Name = "cbFood";
+            this.cbFood.Size = new System.Drawing.Size(519, 30);
+            this.cbFood.TabIndex = 1;
             // 
-            // cb_loaithucan
+            // cbCategory
             // 
-            this.cb_loaithucan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_loaithucan.FormattingEnabled = true;
-            this.cb_loaithucan.Location = new System.Drawing.Point(16, 13);
-            this.cb_loaithucan.Name = "cb_loaithucan";
-            this.cb_loaithucan.Size = new System.Drawing.Size(519, 30);
-            this.cb_loaithucan.TabIndex = 0;
+            this.cbCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(16, 13);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(519, 30);
+            this.cbCategory.TabIndex = 0;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // flp_banan
             // 
@@ -363,7 +365,7 @@ namespace QuanLyQuanPho
             ((System.ComponentModel.ISupportInitialize)(this.neud_giamgia)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.neud_soluong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -385,17 +387,17 @@ namespace QuanLyQuanPho
         private System.Windows.Forms.Button bt_thanhtoan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.NumericUpDown neud_soluong;
-        private System.Windows.Forms.Button bt_themmon;
+        private System.Windows.Forms.NumericUpDown nmFoodCount;
+        private System.Windows.Forms.Button btnAddFood;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cb_tenthucan;
-        private System.Windows.Forms.ComboBox cb_loaithucan;
+        private System.Windows.Forms.ComboBox cbFood;
+        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.FlowLayoutPanel flp_banan;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button bt_chuyenban;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cb_chuyenban;
-        private System.Windows.Forms.ListView lsv_hoadon;
+        private System.Windows.Forms.ListView lsvBill;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
