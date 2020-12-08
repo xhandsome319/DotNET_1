@@ -25,6 +25,8 @@ namespace QuanLyQuanPho
 
         void LoadTable()
         {
+            flp_banan.Controls.Clear();
+
             List<Table> tableList = TableDAO.Instance.LoadTableList();
 
             foreach (Table item in tableList)
@@ -136,6 +138,26 @@ namespace QuanLyQuanPho
             }
 
             ShowBill(table.ID);
+
+            LoadTable();
+        }
+
+        private void bt_thanhtoan_Click(object sender, EventArgs e)
+        {
+            Table table = lsvBill.Tag as Table;
+
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+
+            if (idBill != -1)
+            {
+                if (MessageBox.Show("Bạn có chắc thanh toán hóa đơn cho bàn " + table.Name, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    BillDAO.Instance.CheckOut(idBill);
+                    ShowBill(table.ID);
+
+                    LoadTable();
+                }
+            }
         }
     }
 }

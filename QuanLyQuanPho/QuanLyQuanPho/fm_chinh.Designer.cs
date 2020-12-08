@@ -212,6 +212,7 @@ namespace QuanLyQuanPho
             this.bt_thanhtoan.TabIndex = 3;
             this.bt_thanhtoan.Text = "Thanh Toán";
             this.bt_thanhtoan.UseVisualStyleBackColor = true;
+            this.bt_thanhtoan.Click += new System.EventHandler(this.bt_thanhtoan_Click);
             // 
             // label2
             // 
