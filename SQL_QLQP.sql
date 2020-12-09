@@ -337,9 +337,29 @@ BEGIN
 	
 	DECLARE @idTable INT
 	
-	SELECT @idTable = idTable FROM dbo.Bill WHERE id = @idBill AND status = 0
+	SELECT @idTable = idTable FROM dbo.Bill WHERE id = @idBill AND status = 0	
 	
-	UPDATE dbo.TableFood SET status = N'Có người' WHERE id = @idTable
+	DECLARE @count INT
+	SELECT @count = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idBill
+	
+	IF (@count > 0)
+	BEGIN
+	
+		PRINT @idTable
+		PRINT @idBill
+		PRINT @count
+		
+		UPDATE dbo.TableFood SET status = N'Có người' WHERE id = @idTable		
+		
+	END		
+	ELSE
+	BEGIN
+	PRINT @idTable
+		PRINT @idBill
+		PRINT @count
+	UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable	
+	end
+	
 END
 GO
 
@@ -373,7 +393,7 @@ UPDATE dbo.Bill SET discount = 0
 GO
 
 
-CREATE PROC USP_SwitchTabel
+CREATE PROC USP_SwitchTable
 @idTable1 INT, @idTable2 int
 AS BEGIN
 

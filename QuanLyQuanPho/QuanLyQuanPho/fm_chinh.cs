@@ -21,6 +21,7 @@ namespace QuanLyQuanPho
             InitializeComponent();
             LoadTable();
             LoadCategory();
+            LoadComboboxTable(cb_chuyenban);
         }
 
         void LoadTable()
@@ -82,6 +83,12 @@ namespace QuanLyQuanPho
             CultureInfo culture = new CultureInfo("vi-VN");
 
             tb_thanhtien.Text = totalPrice.ToString("c", culture);
+        }
+
+        void LoadComboboxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDAO.Instance.LoadTableList();
+            cb.DisplayMember = "Name";
         }
 
         void btn_Click(object sender, EventArgs e)
@@ -161,6 +168,19 @@ namespace QuanLyQuanPho
 
                     LoadTable();
                 }
+            }
+        }
+
+        private void bt_chuyenban_Click(object sender, EventArgs e)
+        {
+            int id1 = (lsvBill.Tag as Table).ID;
+
+            int id2 = (cb_chuyenban.SelectedItem as Table).ID;
+            if (MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển bàn {0} qua bàn {1}", (lsvBill.Tag as Table).Name, (cb_chuyenban.SelectedItem as Table).Name), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                TableDAO.Instance.SwitchTable(id1, id2);
+
+                LoadTable();
             }
         }
     }

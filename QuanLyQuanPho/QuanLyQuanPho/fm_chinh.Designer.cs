@@ -172,7 +172,7 @@ namespace QuanLyQuanPho
             // tb_thanhtien
             // 
             this.tb_thanhtien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_thanhtien.Location = new System.Drawing.Point(184, 96);
+            this.tb_thanhtien.Location = new System.Drawing.Point(184, 89);
             this.tb_thanhtien.Name = "tb_thanhtien";
             this.tb_thanhtien.ReadOnly = true;
             this.tb_thanhtien.Size = new System.Drawing.Size(164, 30);
@@ -184,7 +184,7 @@ namespace QuanLyQuanPho
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(180, 66);
+            this.label4.Location = new System.Drawing.Point(180, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 22);
             this.label4.TabIndex = 5;
@@ -193,7 +193,7 @@ namespace QuanLyQuanPho
             // neud_giamgia
             // 
             this.neud_giamgia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.neud_giamgia.Location = new System.Drawing.Point(16, 97);
+            this.neud_giamgia.Location = new System.Drawing.Point(16, 89);
             this.neud_giamgia.Minimum = new decimal(new int[] {
             100,
             0,
@@ -206,7 +206,7 @@ namespace QuanLyQuanPho
             // bt_thanhtoan
             // 
             this.bt_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_thanhtoan.Location = new System.Drawing.Point(371, 66);
+            this.bt_thanhtoan.Location = new System.Drawing.Point(371, 53);
             this.bt_thanhtoan.Name = "bt_thanhtoan";
             this.bt_thanhtoan.Size = new System.Drawing.Size(164, 75);
             this.bt_thanhtoan.TabIndex = 3;
@@ -218,7 +218,7 @@ namespace QuanLyQuanPho
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 66);
+            this.label2.Location = new System.Drawing.Point(12, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 22);
             this.label2.TabIndex = 2;
@@ -320,18 +320,19 @@ namespace QuanLyQuanPho
             // bt_chuyenban
             // 
             this.bt_chuyenban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_chuyenban.Location = new System.Drawing.Point(353, 66);
+            this.bt_chuyenban.Location = new System.Drawing.Point(298, 53);
             this.bt_chuyenban.Name = "bt_chuyenban";
             this.bt_chuyenban.Size = new System.Drawing.Size(164, 75);
             this.bt_chuyenban.TabIndex = 3;
             this.bt_chuyenban.Text = "Chuyển Bàn";
             this.bt_chuyenban.UseVisualStyleBackColor = true;
+            this.bt_chuyenban.Click += new System.EventHandler(this.bt_chuyenban_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 66);
+            this.label3.Location = new System.Drawing.Point(55, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 22);
             this.label3.TabIndex = 2;
@@ -341,7 +342,7 @@ namespace QuanLyQuanPho
             // 
             this.cb_chuyenban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_chuyenban.FormattingEnabled = true;
-            this.cb_chuyenban.Location = new System.Drawing.Point(74, 97);
+            this.cb_chuyenban.Location = new System.Drawing.Point(48, 90);
             this.cb_chuyenban.Name = "cb_chuyenban";
             this.cb_chuyenban.Size = new System.Drawing.Size(194, 30);
             this.cb_chuyenban.TabIndex = 1;
