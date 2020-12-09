@@ -9,12 +9,13 @@ namespace QuanLyQuanPho.DTO
 {
     public class Bill
     {
-        public Bill(int id, DateTime? DateCheckIn, DateTime? DateCheckOut, int status)
+        public Bill(int id, DateTime? DateCheckIn, DateTime? DateCheckOut, int status, int discount = 0)
         {
             this.ID = id;
             this.DateCheckIn = dateCheckIn;
             this.DateCheckOut = dateCheckOut;
             this.Status = status;
+            this.Discount = discount;
         }
 
         public Bill(DataRow row)
@@ -27,7 +28,11 @@ namespace QuanLyQuanPho.DTO
             { this.DateCheckOut = (DateTime?)dataCheckOutTemp; }
            
             this.Status = (int)row["status"];
+            this.Discount = (int)row["discount"];
         }
+
+        private int discount;
+        public int Discount { get => discount; set => discount = value; }
 
         private DateTime? dateCheckOut;
         public DateTime? DateCheckOut { get => dateCheckOut; set => dateCheckOut = value; }
@@ -41,5 +46,6 @@ namespace QuanLyQuanPho.DTO
 
         private int status;
         public int Status { get => status; set => status = value; }
+        
     }
 }

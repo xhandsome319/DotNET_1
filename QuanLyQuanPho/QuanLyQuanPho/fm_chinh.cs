@@ -81,7 +81,7 @@ namespace QuanLyQuanPho
             }
             CultureInfo culture = new CultureInfo("vi-VN");
 
-            tb_thanhtien.Text = totalPrice.ToString("c",culture);
+            tb_thanhtien.Text = totalPrice.ToString("c", culture);
         }
 
         void btn_Click(object sender, EventArgs e)
@@ -147,12 +147,16 @@ namespace QuanLyQuanPho
             Table table = lsvBill.Tag as Table;
 
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+            int discount = (int)neud_giamgia.Value;
+
+            double totalPrice = double.Parse(tb_thanhtien.Text, NumberStyles.Currency, new CultureInfo("vi-VN"));
+            double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
 
             if (idBill != -1)
             {
-                if (MessageBox.Show("Bạn có chắc thanh toán hóa đơn cho bàn " + table.Name, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0} ?\nTổng tiền cuối cùng sau khi giảm {2} % là:\n{1} - ({1} / 100) x {2} = {3} VNĐ", table.Name, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(idBill);
+                    BillDAO.Instance.CheckOut(idBill, discount);
                     ShowBill(table.ID);
 
                     LoadTable();
